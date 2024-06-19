@@ -5,3 +5,4 @@ kind: Kustomization
 resources:
   - ./secret.sops.yaml
   - ./issuers.yaml
+  - https://github.com/cert-manager/openshift-routes.git//deploy/static?ref=0.5.0
