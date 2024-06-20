@@ -1,0 +1,10 @@
+---
+apiVersion: automationcontroller.ansible.com/v1beta1
+kind: AutomationController
+metadata:
+  name: automation-controller
+spec:
+  ingress_type: none
+  admin_user: ansible
+  postgres_configuration_secret: automation-controller-secret
+  secret_key_secret: automation-controller-secret
