@@ -4,7 +4,9 @@ kind: AutomationController
 metadata:
   name: automation-controller
 spec:
-  ingress_type: none
+  ingress_type: Route
+  route_host: "con.${SECRET_DOMAIN}"
   admin_user: ansible
   postgres_configuration_secret: automation-controller-secret
   secret_key_secret: automation-controller-secret
+  create_preload_data: false
