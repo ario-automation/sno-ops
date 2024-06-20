@@ -12,7 +12,7 @@ spec:
       app.kubernetes.io/name: *app
   dependsOn:
     - name: external-secrets-stores
-  path: ./kubernetes/main/sno/database/cloudnative-pg/app
+  path: ./kubernetes/sno/apps/database/cloudnative-pg/app
   prune: true
   sourceRef:
     kind: GitRepository
