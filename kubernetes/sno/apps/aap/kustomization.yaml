@@ -5,4 +5,4 @@ kind: Kustomization
 resources:
   - ./namespace.yaml
   - ./aap/ks.yaml
-  # - ./automation-controller/ks.yaml
+  - ./automation-controller/ks.yaml
