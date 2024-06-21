@@ -5,6 +5,9 @@ metadata:
   name: automation-controller
 spec:
   ingress_type: Route
+  ingress_annotations: |
+    cert-manager.io/issuer-kind: ClusterIssuer
+    cert-manager.io/issuer-name: letsencrypt-production
   route_host: "con.${SECRET_DOMAIN}"
   hostname: "con.${SECRET_DOMAIN}"
   admin_user: ansible
