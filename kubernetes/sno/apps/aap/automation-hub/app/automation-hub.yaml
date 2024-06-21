@@ -1,0 +1,17 @@
+---
+apiVersion: automationcontroller.ansible.com/v1beta1
+kind: AutomationHub
+metadata:
+  name: automation-hub
+spec:
+  ingress_type: Route
+  ingress_annotations: |
+    cert-manager.io/issuer-kind: ClusterIssuer
+    cert-manager.io/issuer-name: letsencrypt-production
+  route_host: "hub.${SECRET_DOMAIN}"
+  hostname: "hub.${SECRET_DOMAIN}"
+  file_storage_size: 100Gi
+  admin_user: ansible
+  admin_password_secret: automation-hub-secret
+  db_fields_encryption_secret: automation-hub-secret
+  postgres_configuration_secret: automation-hub-secret
