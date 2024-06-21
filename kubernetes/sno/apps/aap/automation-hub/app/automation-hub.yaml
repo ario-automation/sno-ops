@@ -11,7 +11,6 @@ spec:
   route_host: "hub.${SECRET_DOMAIN}"
   hostname: "hub.${SECRET_DOMAIN}"
   admin_user: ansible
-  admin_password_secret: automation-hub-secret
   db_fields_encryption_secret: automation-hub-secret
   postgres_configuration_secret: automation-hub-secret
   object_storage_s3_secret: automation-hub-secret
