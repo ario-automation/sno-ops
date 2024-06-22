@@ -28,6 +28,7 @@ spec:
   values:
     global:
       enabled: false
+      openshift: true
     server:
       enabled: true
       updateStrategyType: RollingUpdate
