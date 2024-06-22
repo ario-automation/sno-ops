@@ -1,0 +1,18 @@
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: vault-route
+  annotations:
+    cert-manager.io/issuer-kind: ClusterIssuer
+    cert-manager.io/issuer-name: letsencrypt-production
+spec:
+  host: "vault.${SECRET_DOMAIN}"
+  to:
+    kind: Service
+    name: vault
+  port:
+    targetPort: 8200
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
