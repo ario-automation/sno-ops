@@ -38,6 +38,7 @@ spec:
         enabled: true
         size: 20Gi
         mountPath: "/vault/data"
+        storageClass: "lvms-vg1"
         accessMode: ReadWriteOnce
 
       extraEnvironmentVars:
