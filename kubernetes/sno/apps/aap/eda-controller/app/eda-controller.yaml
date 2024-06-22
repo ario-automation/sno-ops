@@ -10,5 +10,5 @@ spec:
   db_fields_encryption_secret: eda-controller-secret
   database:
     database_secret: eda-controller-secret
-  admin_user: nick.a@redhat.com
+  admin_user: ansible
   automation_server_url: "https://con.${SECRET_DOMAIN}"
