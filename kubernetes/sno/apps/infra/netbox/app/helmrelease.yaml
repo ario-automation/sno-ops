@@ -16,6 +16,11 @@ spec:
   install:
     remediation:
       retries: 3
+  podSecurityContext:
+    fsGroup: 1000730001
+  securityContext:
+    runAsUser: 1000730001
+    runAsGroup: 1000730001
   upgrade:
     cleanupOnFail: true
     remediation:
@@ -98,6 +103,11 @@ spec:
       enabled: true
       updateStrategy:
         type: RollingUpdate
+      podSecurityContext:
+        fsGroup: 1000730001
+      securityContext:
+        runAsUser: 1000730001
+        runAsGroup: 1000730001
     resources:
       requests:
         cpu: 10m
