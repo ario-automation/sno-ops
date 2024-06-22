@@ -5,8 +5,10 @@ metadata:
   name: eda-controller
 spec:
   ingress_type: Route
-  route_host: eda.sno.ansible.show
-  hostname: eda.sno.ansible.show
+  route_host: "eda.${SECRET_DOMAIN}"
+  hostname: "eda.${SECRET_DOMAIN}"
   db_fields_encryption_secret: eda-controller-secret
+  database:
+    database_secret: eda-controller-secret
   admin_user: nick.a@redhat.com
-  automation_server_url: https://con.sno.ansible.show
+  automation_server_url: "https://con.${SECRET_DOMAIN}"
