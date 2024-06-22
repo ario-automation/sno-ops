@@ -1,0 +1,12 @@
+---
+apiVersion: eda.ansible.com/v1alpha1
+kind: EDA
+metadata:
+  name: eda-controller
+spec:
+  ingress_type: Route
+  route_host: eda.sno.ansible.show
+  hostname: eda.sno.ansible.show
+  db_fields_encryption_secret: eda-controller-secret
+  admin_user: nick.a@redhat.com
+  automation_server_url: https://con.sno.ansible.show
