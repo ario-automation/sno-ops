@@ -12,7 +12,7 @@ spec:
     kind: Service
     name: vault
   port:
-    targetPort: 8200
+    targetPort: http
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect
