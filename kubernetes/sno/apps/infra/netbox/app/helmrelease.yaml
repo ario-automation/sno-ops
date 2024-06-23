@@ -118,6 +118,8 @@ spec:
       type: RollingUpdate
     worker:
       enabled: true
+      podSecurityContext:
+        fsGroup: 1000730000
       securityContext:
         runAsUser: 1000730000
         runAsGroup: 1000730000
