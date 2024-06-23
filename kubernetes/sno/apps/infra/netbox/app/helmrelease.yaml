@@ -118,6 +118,9 @@ spec:
       type: RollingUpdate
     worker:
       enabled: true
+      securityContext:
+        runAsUser: 1000730000
+        runAsGroup: 1000730000
       updateStrategy:
         type: RollingUpdate
     resources:
