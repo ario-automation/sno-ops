@@ -111,6 +111,9 @@ spec:
         repository: docker.io/library/busybox
         tag: 1.36.1
         pullPolicy: IfNotPresent
+      securityContext:
+        runAsUser: 1000730000
+        runAsGroup: 1000730000
     updateStrategy:
       type: RollingUpdate
     worker:
