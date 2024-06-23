@@ -31,6 +31,19 @@ spec:
     envFrom:
       - secretRef:
           name: netbox-secret
+    podSecurityContext:
+      fsGroup: 1000730000
+    securityContext:
+      runAsUser: 1000730000
+      runAsGroup: 1000730000
+      runAsNonRoot: true
+      privileged: false
+      readOnlyRootFilesystem: true
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop: ["ALL"]
+      seccompProfile:
+        type: "RuntimeDefault"
     probes:
       liveness: &probes
         enabled: true
