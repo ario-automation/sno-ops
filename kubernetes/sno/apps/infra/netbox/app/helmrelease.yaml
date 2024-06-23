@@ -28,7 +28,9 @@ spec:
     image:
       repository: "netboxcommunity/netbox"
       tag: "v4.0.5-2.9.1"
-    envFrom: *envFrom
+    envFrom:
+      - secretRef:
+          name: netbox-secret
     probes:
       liveness: &probes
         enabled: true
