@@ -6,4 +6,3 @@ resources:
   - ./namespace.yaml
   - ./aap/ks.yaml
   - ./automation-controller/ks.yaml
-  - ./eda-controller/ks.yaml
